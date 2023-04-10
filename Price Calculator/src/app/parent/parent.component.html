@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Price Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="contact-info">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of rows">
+              <td>{{ row.item }}</td>
+              <td>{{ row.quantity }}</td>
+              <td>{{ 'Rs' + row.price.toFixed(2) }}</td>
+              <td>{{ 'Rs' + row.total.toFixed(2) }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="total-section">
+          <app-child [getTotalProducts]="getTotalProducts()" [getTotalQuantity]="getTotalQuantity()"
+            [getTotalSum]="getTotalSum()"></app-child>
+        </div>
+      </div>
+      <div class="contact-info-form"> <span class="circle one"></span> <span class="circle two"></span>
+        <form action="index.html" autocomplete="off">
+          <h3 class="title">Price Calculator</h3>
+          <div class="form-group">
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item" class="form-control" [(ngModel)]="item">
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" class="form-control" [(ngModel)]="quantity" min="1">
+          </div>
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Rs</span>
+              </div>
+
+              <input type="number" id="price" name="price" class="form-control" [(ngModel)]="price" min="0" step="10">
+            </div>
+          </div>
+          <button type="button" (click)="calculateTotal()">Calculate Total</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
