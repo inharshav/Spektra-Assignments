@@ -1,0 +1,26 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Student ID</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Course</th>
+        <th scope="col">Course Fee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of students"> 
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.gender}}</td>
+        <td>{{i.dob}}</td>
+        <td>{{i.course}}</td>
+        <td>{{i.coursefee}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <app-admin [totalStudents] = "getTotalStudents()" [totalMales] = "getTotalMales()" 
+  [totalFemales] = "getTotalFemales()"> </app-admin>
