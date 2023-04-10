@@ -1,0 +1,21 @@
+<section>
+    <div>
+    <h1>  Assignment 2 </h1>
+<p>To check for valid or invalid</p>
+
+<input type="radio" value="valid" name="option" (click)=" onSelct('valid')">valid <br>
+<input type="radio" value="invalid" name="option" (click)=" onSelct('invalid')">invalid <br>
+    <div *ngIf = "selectOpt">
+        <div *ngIf = "selectOpt === 'valid'">
+            <p>Data is valid</p>
+        </div>
+        <div *ngIf = "selectOpt === 'invalid'">
+            <p>Data is invalid</p>
+        </div>
+    </div>
+   <br>
+   <br>
+
+</div>
+
+</section>

@@ -1,0 +1,41 @@
+
+
+<table>
+    
+    <table style="width:100%">
+      <h3>Assignment 2</h3>
+        <tr>
+          <th>Name</th>
+          <th>Age</th> 
+          <th>City</th>
+        </tr>
+
+
+    <tr *ngFor="let i of arr">
+       
+      <td>{{i[0]}}</td>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+  </tr>
+
+</table>
+<br>
+<section>
+  <h3>Assignment 3</h3>
+  <p>Select a country</p>
+  <select [(ngModel)]="selectedCountry">
+    <option value="India">India</option>
+    <option value="China">China</option>
+    <option value="USA">USA</option>
+  </select>
+  <div [ngSwitch]="selectedCountry">
+    <div *ngSwitchCase="'India'"> You have selected India </div>  
+    <div *ngSwitchCase="'China'"> You have selected China </div>    
+    <div *ngSwitchCase="'USA'"> You have selected USA </div>  
+    <!-- <div *ngSwitchDefault> Please select a country </div>   -->
+  </div>
+<br>
+<br>
+
+</section>
+
