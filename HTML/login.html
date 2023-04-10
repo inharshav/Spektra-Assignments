@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> My Website </title>
+</head>
+<body>
+<h1>
+User Login
+</h1>
+<form>
+<form name="userlogin" method="post" action="login.aspx">
+<fieldset>
+<legend>Enter your login details: </legend>
+<div id="usernameField" class="field">
+<label for="uname"> Name: </label>
+<input id="uname" name="username" type="text" placeholder="First and Last Name" required/>
+
+</div>
+<div id="passwordField" class="field">
+
+<label for="pwd"> Password: </label>
+<input id="pwd" name="password" type="password" placeholder="Password" required/>
+</div>
+
+<div id="MailField" class="field">
+<label for="email"> Email: </label>
+<input type="text" name="Email" placeholder="Enter your mail id" required/> <br>
+</div>
+
+<div id="AgeField" class="field">
+
+    <label for="age"> Age: </label>
+    <input id="number" name="age" type="number" placeholder="Enter Age in no.s" required/>
+    </div>
+
+<div id="PhoneField" class="field">
+
+    <label for="phone"> Phone: </label>
+    <input type="tel" name="Phone" type="number" placeholder=" Only no.s allowed" required/>
+    </div>    
+
+</fieldset>
+<input type="submit" value="Login"/>
+</form>
