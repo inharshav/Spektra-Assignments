@@ -1,0 +1,27 @@
+<section>
+ <button type="button" class="btn btn-primary"(click)="displayEmployees()">DisplayEmployees</button>
+
+ 
+ <br/>
+ <br/>
+    <table *ngIf="employees && employees.length" class="table table-hover">
+        
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Sl no</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{employee.slno}}</td>
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>            
+            <td>{{employee.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
